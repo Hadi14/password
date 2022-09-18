@@ -1,15 +1,18 @@
 const d = document;
 const eye = d.querySelector('.fa-eye');
 const eyeslash = d.querySelector('.fa-eye-slash');
-let e = true;
-eye.addEventListener('click', () => {
-    eye.classList.toggle("hide");
-    e = false;
-    // eyeslash.classList.add("show");
-    // alert("df");
-})
-eyeslash.addEventListener('click', () => {
-    eyeslash.classList.toggle("hide");
-    // eye.classList.add("show");
-    // alert("df");
+const ey = d.querySelector('.eye');
+const inp = d.querySelector('.inp');
+
+ey.addEventListener('click', () => {
+    if (inp.type == "text") {
+        inp.type = "password";
+        // eyeslash.classList.add("hide");
+        // eye.classList.add("show");
+    }
+    else if (inp.type == "password") {
+        inp.type = "text";
+        // eyeslash.classList.add("hide");
+        // eye.classList.add("show");
+    }
 })
