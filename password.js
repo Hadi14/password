@@ -1,18 +1,20 @@
 const d = document;
-const eye = d.querySelector('.fa-eye');
-const eyeslash = d.querySelector('.fa-eye-slash');
 const ey = d.querySelector('.eye');
+
+
+const eyeslash = d.querySelector('.ey-s');
+const eye = d.querySelector('.ey');
 const inp = d.querySelector('.inp');
 
 ey.addEventListener('click', () => {
     if (inp.type == "text") {
         inp.type = "password";
-        // eyeslash.classList.add("hide");
-        // eye.classList.add("show");
+        eye.style.display = "block";
+        eyeslash.style.display = "none";
     }
     else if (inp.type == "password") {
         inp.type = "text";
-        // eyeslash.classList.add("hide");
-        // eye.classList.add("show");
+        eye.style.display = "none";
+        eyeslash.style.display = "block";
     }
 })
